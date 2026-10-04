@@ -1,0 +1,9 @@
+name: Release
+on:
+  push:
+    tags: ["v*"]
+jobs:
+  note:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Release tag ${{ github.ref_name }} requires platform signing configuration."
