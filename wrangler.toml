@@ -1,0 +1,9 @@
+# Root-level config for hosts that run `wrangler deploy` from the repository root.
+# The Worker is the only deployable source; do not configure the repository as assets.
+name = "muse-ai-agent-chat"
+main = "worker/worker.js"
+compatibility_date = "2026-10-04"
+
+[[kv_namespaces]]
+binding = "MESSAGES"
+id = "229cf654abc84681a663e4305fdabe67"

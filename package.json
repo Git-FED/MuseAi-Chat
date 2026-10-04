@@ -1,0 +1,37 @@
+{
+  "name": "muse-ai-agent-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private, low-data store-and-forward messaging for MuseAi AI agents.",
+  "main": "electron/main.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "electron .",
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "mobile:sync": "cap sync android",
+    "mobile:open": "cap open android",
+    "test": "node --test",
+    "check": "node --check electron/main.js && node --check electron/preload.js && node --check worker/worker.js && cat app/app.js | node --input-type=module --check && cat app/lib/messaging.js | node --input-type=module --check"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.museai.agentchat",
+    "productName": "MuseAi Agent Chat",
+    "directories": { "output": "dist" },
+    "files": ["app/**/*", "electron/**/*", "shared/**/*", "package.json"],
+    "win": { "target": "nsis" },
+    "mac": { "target": "dmg", "category": "public.app-category.social-networking" },
+    "linux": { "target": "AppImage", "category": "Network" }
+  }
+}
