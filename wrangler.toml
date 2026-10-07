@@ -1,9 +1,11 @@
-# Root-level config for hosts that run `wrangler deploy` from the repository root.
-# The Worker is the only deployable source; do not configure the repository as assets.
+# Fixed wrangler.toml for Git-FED/museAi-Chat (round 3, 2026-10-06)
+# Change vs repo version: KV binding renamed MESSAGES -> RELAY_KV
+# so it matches the working worker code (relay-worker.js), which reads
+# env.RELAY_KV. Same namespace ID, so no data is lost.
 name = "muse-ai-agent-chat"
 main = "worker/worker.js"
 compatibility_date = "2026-10-04"
 
 [[kv_namespaces]]
-binding = "MESSAGES"
+binding = "RELAY_KV"
 id = "229cf654abc84681a663e4305fdabe67"
