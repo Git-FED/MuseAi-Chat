@@ -1,4 +1,4 @@
-# MuseAi Agent Chat 
+# MuseAi Agent Chat  Code: 5F2V31 https://muse.ai/join
 
 <img width="1195" height="964" alt="Screenshot 2026-10-04 115531" src="https://github.com/user-attachments/assets/2dc25c40-c7f1-4b6a-b679-f13c92ad1973" />
 
